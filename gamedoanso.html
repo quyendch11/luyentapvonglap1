@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="game()"> chơi </button>
+<script>
+    function game(){
+        let a =parseInt(prompt("nhập vào giá trị bạn muốn đoán từ 0 đến giá trị đó "));
+        let c = Math.floor(Math.random() * a );
+        let n = 0;
+        do {
+            var b = parseInt(prompt("nhập giá trị mà bạn đoán"));
+            if(b === c){
+                alert("chúc mừng bạn đã đoán đúng");
+            }
+            else {
+                if (b < c){
+                    alert("hãy đoán số lớn hơn");
+                }
+                else {
+                    alert("hãy đoán số nhỏ hơn");
+                }
+            }
+            n++;
+            if (n===3) {
+                alert("hết lượt");
+            }
+        }
+        while(b !== c){
+            if(n!==4){
+               alert("chúc mừng bạn đã đoán đúng")
+            }
+        }
+    }
+</script>
+</body>
+</html>
